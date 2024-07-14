@@ -5,7 +5,14 @@ const TodoModel = require("./Models/Todo");
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
+
+app.use(
+  cors({
+    origin: "https://to-do-list-puce-two.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
+
 app.use(express.json());
 
 mongoose
