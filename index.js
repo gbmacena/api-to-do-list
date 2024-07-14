@@ -10,6 +10,7 @@ app.use(
   cors({
     origin: "https://to-do-list-puce-two.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
